@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/renatopanda/rails-tests-demo.svg?branch=master)](https://travis-ci.org/renatopanda/rails-tests-demo)
 [![Dependency Status](https://gemnasium.com/badges/github.com/renatopanda/rails-tests-demo.svg)](https://gemnasium.com/github.com/renatopanda/rails-tests-demo)
 [![Maintainability](https://api.codeclimate.com/v1/badges/14d262d008518f24834c/maintainability)](https://codeclimate.com/github/renatopanda/rails-tests-demo/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/14d262d008518f24834c/test_coverage)](https://codeclimate.com/github/renatopanda/rails-tests-demo/test_coverage)
+[![Issue Count](https://codeclimate.com/github/renatopanda/rails-tests-demo/badges/issue_count.svg)](https://codeclimate.com/github/renatopanda/rails-tests-demo/test_coverage)
 
 # MEI-IoT ES Classes - Rails 5.1 Software Testing
 
