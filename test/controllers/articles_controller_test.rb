@@ -20,8 +20,8 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
       post articles_url, params: { article: { author_id: @article.author_id, body: @article.body, title: @article.title } }
     end
 
-    #assert_redirected_to article_url(Article.last)
-    assert_redirected_to articles_url
+    assert_redirected_to article_url(Article.last)
+    #assert_redirected_to articles_url
   end
 
   test "should show article" do
