@@ -19,7 +19,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Article.count') do
       post articles_url, params: { article: { author_id: @article.author_id, body: @article.body, title: @article.title } }
     end
-
+    byebug
     assert_redirected_to article_url(Article.last)
     #assert_redirected_to articles_url
   end

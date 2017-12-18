@@ -2,9 +2,10 @@
 require "application_system_test_case"
 
 class ArticlesTest < ApplicationSystemTestCase
+
   test "visiting the index" do
     visit articles_url
-  	#take_screenshot
+  	take_screenshot
     assert_selector "h1", text: "Articles"
   end
 
