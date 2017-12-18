@@ -1,0 +1,40 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=f2dcc7683e129bfa37393ccc2af952dc7ab2a544e3bc2c0795cb2d7e2d4a03f4
+    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - wget http://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - sudo apt-get install libnss3
+  - sudo apt-get --only-upgrade install google-chrome-stable
+  - sudo cp chromedriver /usr/local/bin/.
+  - sudo chmod +x /usr/local/bin/chromedriver
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+
+sudo: required
+
+language: ruby
+rvm:
+ - "2.4.1"
+
+addons:
+  sources:
+  - google-chrome
+  apt:
+    packages:
+    - google-chrome-stable
+
+script:
+ - RAILS_ENV=test bundle exec rake db:migrate --trace
+ - bundle exec rake db:test:prepare
+ - bundle exec rake test
+ - bundle exec rake test:system
+ - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+
+ bundler_args: --binstubs=./bundler_stubs
+ 
