@@ -8,7 +8,7 @@ addons:
 env:
   global:
     - DB=postgresql
-    - CC_TEST_REPORTER_ID=a51356f42b9d5c3e0e52f1df670d1e453c7ddfe129eaa402b988cdd666b0387b
+    - CC_TEST_REPORTER_ID=f2dcc7683e129bfa37393ccc2af952dc7ab2a544e3bc2c0795cb2d7e2d4a03f4
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 language: ruby
 rvm:
@@ -32,3 +32,4 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - sleep 3
 bundler_args: --binstubs=./bundler_stubs
+
