@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Artigo magnífico
+  body: balblal bla bla bla bla bla bala lba bla bla
+  author: panda
+
+two:
+  title: Aula de testes
+  body: dasdasdas
+  author: diogo
+  
