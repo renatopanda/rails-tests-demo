@@ -1,24 +1,19 @@
-# README
+[![Dependency Status](https://gemnasium.com/badges/github.com/renatopanda/rails-tests-demo.svg)](https://gemnasium.com/github.com/renatopanda/rails-tests-demo)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# MEI-IoT ES Classes - Rails 5.1 Software Testing
 
-Things you may want to cover:
+Code used during the class / workshop about software testing in rails.
+Contains model, controllers, integration and system testing (using chrome headless + selenium running inside Vagrant).
 
-* Ruby version
 
-* System dependencies
+To Do:
 
-* Configuration
+* Document everything in this readme.
 
-* Database creation
+* Maybe redo it, splitting each step in different commits (and tags)
 
-* Database initialization
+* git clone && vagrant up && cd /vagrant && rails test && rails test:system to get it done
 
-* How to run the test suite
+* Installing chrome+selenium+chromewebdriver+xfvb+jse is required to run system tests, check:
+https://gist.github.com/renatopanda/0f0712a10eda32689334da514e21606e
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
